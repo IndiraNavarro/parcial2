@@ -1,7 +1,9 @@
+
 import dotenv from "dotenv";
 import express, { Application } from "express";
 import morgan from "morgan";
 import { sequelize, testConnection, getDatabaseInfo } from "../database/db";
+import { Routes } from "../routes/index";
 
 var cors = require("cors");
 
@@ -9,6 +11,7 @@ dotenv.config();
 
 export class App {
   public app: Application;
+  public routePrv: Routes = new Routes();
 
   constructor(private port?: number | string) {
     this.app = express();
@@ -19,7 +22,7 @@ export class App {
   }
 
   private settings(): void {
-    this.app.set('port', this.port || process.env.PORT || 4000);
+    this.app.set('port', this.port || process.env.PORT || 3000);
   }
 
   private middlewares(): void {
@@ -31,7 +34,13 @@ export class App {
 
   // Route configuration
   private routes(): void {
+
+    // Agrega tus rutas aquí de la siguiente manera
     
+    this.routePrv.dogRoutes.routes(this.app);
+    this.routePrv.adoptionRoutes.routes(this.app);
+    this.routePrv.carRoutes.routes(this.app);
+    this.routePrv.tuitionRoutes.routes(this.app);
   }
 
   private async dbConnection(): Promise<void> {
@@ -63,3 +72,4 @@ export class App {
     });
   }
 }
+

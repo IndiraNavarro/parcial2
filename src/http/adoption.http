@@ -1,0 +1,43 @@
+// adoption.http
+@token = TU_TOKEN_AQUI
+@baseUrl = http://localhost:3000
+
+### ========== PUBLIC ==========
+
+### List adoptions (PUBLIC)
+GET {{baseUrl}}/api/adoption/public
+
+### Get adoption by ID (PUBLIC)
+GET {{baseUrl}}/api/adoption/public/1
+
+### Create adoption (PUBLIC)
+POST {{baseUrl}}/api/adoption/public
+Content-Type: application/json
+
+{
+  "adoptionDate": "2026-05-14",
+  "identificationNumber": "1234567890",
+  "adopterName": "Indira Navarro",
+  "value": 150000.00,
+  "dogId": 1,
+  "status": "ACTIVE"
+}
+
+### Update adoption (PUBLIC)
+PATCH {{baseUrl}}/api/adoption/public/1
+Content-Type: application/json
+
+{
+  "adoptionDate": "2026-05-15",
+  "identificationNumber": "1234567890",
+  "adopterName": "Indira Navarro",
+  "value": 180000.00,
+  "dogId": 1,
+  "status": "ACTIVE"
+}
+
+### Hard delete adoption (PUBLIC)
+DELETE {{baseUrl}}/api/adoption/public/1
+
+### Soft delete adoption (PUBLIC)
+DELETE {{baseUrl}}/api/adoption/public/1/logic
