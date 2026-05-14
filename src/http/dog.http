@@ -15,7 +15,7 @@ POST {{baseUrl}}/api/dog/public
 Content-Type: application/json
 
 {
-  "breed": "Labrador",
+  "breed": "fila",
   "birthDate": "2024-03-20",
   "color": "Yellow",
   "vaccinated": true,
@@ -23,7 +23,7 @@ Content-Type: application/json
 }
 
 ### Update dog (PUBLIC)
-PATCH {{baseUrl}}/api/dog/public/1
+PATCH {{baseUrl}}/api/dog/public/2
 Content-Type: application/json
 
 {
@@ -38,4 +38,4 @@ Content-Type: application/json
 DELETE {{baseUrl}}/api/dog/public/1
 
 ### Soft delete dog (PUBLIC)
-DELETE {{baseUrl}}/api/dog/public/1/logic
+DELETE {{baseUrl}}/api/dog/public/12/logic

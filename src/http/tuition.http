@@ -8,7 +8,7 @@
 GET {{baseUrl}}/api/tuition/public
 
 ### Get tuition by ID (PUBLIC)
-GET {{baseUrl}}/api/tuition/public/1
+GET {{baseUrl}}/api/tuition/public/19
 
 ### Create tuition (PUBLIC)
 POST {{baseUrl}}/api/tuition/public
@@ -16,7 +16,7 @@ Content-Type: application/json
 
 {
   "registrationDate": "2026-05-14",
-  "city": "Riohacha",
+  "city": "Medellin",
   "payment": 250000.00,
   "carId": 1,
   "status": "ACTIVE"
@@ -28,14 +28,14 @@ Content-Type: application/json
 
 {
   "registrationDate": "2026-05-15",
-  "city": "Maicao",
+  "city": "Riohacha",
   "payment": 300000.00,
   "carId": 1,
   "status": "ACTIVE"
 }
 
 ### Hard delete tuition (PUBLIC)
-DELETE {{baseUrl}}/api/tuition/public/1
+DELETE {{baseUrl}}/api/tuition/public/10
 
 ### Soft delete tuition (PUBLIC)
-DELETE {{baseUrl}}/api/tuition/public/1/logic
+DELETE {{baseUrl}}/api/tuition/public/17/logic

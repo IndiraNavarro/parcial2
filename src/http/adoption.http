@@ -8,7 +8,7 @@
 GET {{baseUrl}}/api/adoption/public
 
 ### Get adoption by ID (PUBLIC)
-GET {{baseUrl}}/api/adoption/public/1
+GET {{baseUrl}}/api/adoption/public/12
 
 ### Create adoption (PUBLIC)
 POST {{baseUrl}}/api/adoption/public
@@ -16,28 +16,28 @@ Content-Type: application/json
 
 {
   "adoptionDate": "2026-05-14",
-  "identificationNumber": "1234567890",
-  "adopterName": "Indira Navarro",
+  "identificationNumber": "1234567456",
+  "adopterName": "Indira Orozco",
   "value": 150000.00,
-  "dogId": 1,
+  "dogId": 12,
   "status": "ACTIVE"
 }
 
 ### Update adoption (PUBLIC)
-PATCH {{baseUrl}}/api/adoption/public/1
+PATCH {{baseUrl}}/api/adoption/public/15
 Content-Type: application/json
 
 {
   "adoptionDate": "2026-05-15",
   "identificationNumber": "1234567890",
-  "adopterName": "Indira Navarro",
+  "adopterName": "Indira Orozco",
   "value": 180000.00,
-  "dogId": 1,
+  "dogId": 12,
   "status": "ACTIVE"
 }
 
 ### Hard delete adoption (PUBLIC)
-DELETE {{baseUrl}}/api/adoption/public/1
+DELETE {{baseUrl}}/api/adoption/public/16
 
 ### Soft delete adoption (PUBLIC)
-DELETE {{baseUrl}}/api/adoption/public/1/logic
+DELETE {{baseUrl}}/api/adoption/public/17/logic

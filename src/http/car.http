@@ -8,7 +8,7 @@
 GET {{baseUrl}}/api/car/public
 
 ### Get car by ID (PUBLIC)
-GET {{baseUrl}}/api/car/public/1
+GET {{baseUrl}}/api/car/public/10
 
 ### Create car (PUBLIC)
 POST {{baseUrl}}/api/car/public
@@ -17,27 +17,27 @@ Content-Type: application/json
 {
   "brand": "Toyota",
   "class": "SUV",
-  "model": "2024",
+  "model": "2025",
   "displacement": 2000,
-  "capacity": 5,
+  "capacity": 4,
   "status": "ACTIVE"
 }
 
 ### Update car (PUBLIC)
-PATCH {{baseUrl}}/api/car/public/1
+PATCH {{baseUrl}}/api/car/public/11
 Content-Type: application/json
 
 {
   "brand": "Mazda",
   "class": "Sedan",
   "model": "2023",
-  "displacement": 1800,
+  "displacement": 1900,
   "capacity": 5,
   "status": "ACTIVE"
 }
 
 ### Hard delete car (PUBLIC)
-DELETE {{baseUrl}}/api/car/public/1
+DELETE {{baseUrl}}/api/car/public/16
 
 ### Soft delete car (PUBLIC)
-DELETE {{baseUrl}}/api/car/public/1/logic
+DELETE {{baseUrl}}/api/car/public/18/logic
