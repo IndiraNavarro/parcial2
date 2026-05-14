@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { Tuition, TuitionI } from "../models/tuition";
+import { Tuition, TuitionI } from "../models/Tuition";
 
 export class TuitionController {
   public async getAllTuitions(req: Request, res: Response) {
